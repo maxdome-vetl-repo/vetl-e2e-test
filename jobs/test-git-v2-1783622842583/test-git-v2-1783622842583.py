@@ -6,10 +6,10 @@ sc = SparkContext.getOrCreate()
 spark = SparkSession.builder.getOrCreate()
 
 # Script generated for node S3DataSource
-S3DataSource_1783622109216 = spark.read.format("csv") \
+S3DataSource_1783622860820 = spark.read.format("csv") \
     .option("inferschema", "true") \
     .option("multiLine", "true") \
     .option("header", "true") \
     .option("recursiveFileLookup", "true") \
     .option("sep", ",") \
-    .load("s3://test-bucket-edited")
+    .load("s3://test-bucket")
