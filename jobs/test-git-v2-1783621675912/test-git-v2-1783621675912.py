@@ -12,4 +12,4 @@ S3DataSource_1783621703016 = spark.read.format("csv") \
     .option("header", "true") \
     .option("recursiveFileLookup", "true") \
     .option("sep", ",") \
-    .load("s3://test-bucket")
+    .load("s3://test-bucket-edited")
