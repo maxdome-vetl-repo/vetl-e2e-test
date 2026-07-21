@@ -1,13 +1,13 @@
 {
-  "JobName": "test-git-v2-1784611630721",
+  "JobName": "test-git-v2-1784612524084",
   "bucketName": "amazon-sagemaker-160885286909-ap-south-1-6w7541kzrycxkx",
   "formInput": {
-    "FileName": "test-git-v2-1784611630721",
+    "FileName": "test-git-v2-1784612524084",
     "ContentType": "text/x-python",
-    "Body": "import sys\nfrom pyspark.context import SparkContext\nfrom pyspark.sql import SparkSession\n\nsc = SparkContext.getOrCreate()\nspark = SparkSession.builder.getOrCreate()\n\n# Script generated for node S3DataSource\nS3DataSource_1784611861536 = spark.read.format(\"csv\") \\\n    .option(\"inferschema\", \"true\") \\\n    .option(\"multiLine\", \"true\") \\\n    .option(\"header\", \"true\") \\\n    .option(\"recursiveFileLookup\", \"true\") \\\n    .option(\"sep\", \",\") \\\n    .load(\"s3://test-bucket\")\n"
+    "Body": "import sys\nfrom pyspark.context import SparkContext\nfrom pyspark.sql import SparkSession\n\nsc = SparkContext.getOrCreate()\nspark = SparkSession.builder.getOrCreate()\n\n# Script generated for node S3DataSource\nS3DataSource_1784612550935 = spark.read.format(\"csv\") \\\n    .option(\"inferschema\", \"true\") \\\n    .option(\"multiLine\", \"true\") \\\n    .option(\"header\", \"true\") \\\n    .option(\"recursiveFileLookup\", \"true\") \\\n    .option(\"sep\", \",\") \\\n    .load(\"s3://test-bucket\")\n"
   },
   "JobUpdate": {
-    "Name": "test-git-v2-1784611630721",
+    "Name": "test-git-v2-1784612524084",
     "Timeout": 480,
     "WorkerType": "G.1X",
     "NumberOfWorkers": 10,
@@ -33,8 +33,8 @@
       "--enable-auto-scaling": "true",
       "--additional-python-modules": "",
       "--smus-job-compute": "default.spark",
-      "--smus-orig-asset": "jobs/test-git-v2-1784611630721/test-git-v2-1784611630721.vetl",
-      "--conf": "spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions --conf spark.datasource.redshift.community.glue_endpoint=https://glue.ap-south-1.amazonaws.com --conf spark.datasource.redshift.community.data_api_endpoint=https://redshift-data.ap-south-1.amazonaws.com --conf spark.hadoop.fs.s3.impl=com.amazon.ws.emr.hadoop.fs.EmrFileSystem --conf spark.driver.maxResultSize=0 --conf spark.sql.catalog.spark_catalog=org.apache.iceberg.spark.SparkSessionCatalog --conf spark.sql.catalog.spark_catalog.catalog-impl=org.apache.iceberg.aws.glue.GlueCatalog --conf spark.sql.catalog.spark_catalog.glue.id=160885286909 --conf spark.sql.catalog.spark_catalog.glue.account-id=160885286909 --conf spark.sql.catalog.spark_catalog.glue.endpoint=https://glue.ap-south-1.amazonaws.com --conf spark.sql.catalog.spark_catalog.client.region=ap-south-1 --conf spark.extraListeners=io.openlineage.spark.agent.OpenLineageSparkListener --conf spark.openlineage.transport.type=amazon_datazone_api --conf spark.openlineage.transport.domainId=dzd-auwnbpa0xlur7l --conf spark.openlineage.columnLineage.datasetLineageEnabled=True --conf spark.openlineage.facets.custom_environment_variables=[AWS_DEFAULT_REGION;GLUE_VERSION;GLUE_COMMAND_CRITERIA;GLUE_PYTHON_VERSION;] --conf spark.glue.accountId=160885286909 --conf spark.glue.JOB_NAME=test-git-v2-1784611630721",
+      "--smus-orig-asset": "jobs/test-git-v2-1784612524084/test-git-v2-1784612524084.vetl",
+      "--conf": "spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions --conf spark.datasource.redshift.community.glue_endpoint=https://glue.ap-south-1.amazonaws.com --conf spark.datasource.redshift.community.data_api_endpoint=https://redshift-data.ap-south-1.amazonaws.com --conf spark.hadoop.fs.s3.impl=com.amazon.ws.emr.hadoop.fs.EmrFileSystem --conf spark.driver.maxResultSize=0 --conf spark.sql.catalog.spark_catalog=org.apache.iceberg.spark.SparkSessionCatalog --conf spark.sql.catalog.spark_catalog.catalog-impl=org.apache.iceberg.aws.glue.GlueCatalog --conf spark.sql.catalog.spark_catalog.glue.id=160885286909 --conf spark.sql.catalog.spark_catalog.glue.account-id=160885286909 --conf spark.sql.catalog.spark_catalog.glue.endpoint=https://glue.ap-south-1.amazonaws.com --conf spark.sql.catalog.spark_catalog.client.region=ap-south-1 --conf spark.extraListeners=io.openlineage.spark.agent.OpenLineageSparkListener --conf spark.openlineage.transport.type=amazon_datazone_api --conf spark.openlineage.transport.domainId=dzd-auwnbpa0xlur7l --conf spark.openlineage.columnLineage.datasetLineageEnabled=True --conf spark.openlineage.facets.custom_environment_variables=[AWS_DEFAULT_REGION;GLUE_VERSION;GLUE_COMMAND_CRITERIA;GLUE_PYTHON_VERSION;] --conf spark.glue.accountId=160885286909 --conf spark.glue.JOB_NAME=test-git-v2-1784612524084",
       "--custom-logGroup-prefix": "datazone-6w7541kzrycxkx-dev",
       "author": "arn:aws:iam::160885286909:role/SageMakerAdminFederatedRole"
     },
@@ -82,7 +82,7 @@
     },
     "Command": {
       "Name": "glueetl",
-      "ScriptLocation": "s3://amazon-sagemaker-160885286909-ap-south-1-6w7541kzrycxkx/shared/jobs/test-git-v2-1784611630721/test-git-v2-1784611630721.py",
+      "ScriptLocation": "s3://amazon-sagemaker-160885286909-ap-south-1-6w7541kzrycxkx/shared/jobs/test-git-v2-1784612524084/test-git-v2-1784612524084.py",
       "PythonVersion": "3.9"
     },
     "Tags": {
