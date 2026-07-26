@@ -6,7 +6,7 @@ sc = SparkContext.getOrCreate()
 spark = SparkSession.builder.getOrCreate()
 
 # Script generated for node S3DataSource
-S3DataSource_1785038412188 = spark.read.format("csv") \
+S3DataSource_1785038869374 = spark.read.format("csv") \
     .option("inferschema", "true") \
     .option("multiLine", "true") \
     .option("header", "true") \
