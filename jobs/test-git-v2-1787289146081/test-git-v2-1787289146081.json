@@ -1,0 +1,92 @@
+{
+  "JobName": "test-git-v2-1787289146081",
+  "bucketName": "amazon-sagemaker-296062566109-ap-northeast-2-5hfkhb14zra3vc",
+  "formInput": {
+    "FileName": "test-git-v2-1787289146081",
+    "ContentType": "text/x-python",
+    "Body": "import sys\nfrom pyspark.context import SparkContext\nfrom pyspark.sql import SparkSession\n\nsc = SparkContext.getOrCreate()\nspark = SparkSession.builder.getOrCreate()\n\n# Script generated for node S3DataSource\nS3DataSource_1787289236695 = spark.read.format(\"csv\") \\\n    .option(\"inferschema\", \"true\") \\\n    .option(\"multiLine\", \"true\") \\\n    .option(\"header\", \"true\") \\\n    .option(\"recursiveFileLookup\", \"true\") \\\n    .option(\"sep\", \",\") \\\n    .load(\"s3://test-bucket\")\n"
+  },
+  "JobUpdate": {
+    "Name": "test-git-v2-1787289146081",
+    "Timeout": 480,
+    "WorkerType": "G.1X",
+    "NumberOfWorkers": 10,
+    "GlueVersion": "5.1",
+    "MaxRetries": 0,
+    "Role": "arn:aws:iam::296062566109:role/AmazonSageMakerAdminIAMExecutionRoleForTesting",
+    "JobMode": "VISUAL",
+    "JobRunQueuingEnabled": false,
+    "ExecutionProperty": {
+      "MaxConcurrentRuns": 1
+    },
+    "ExecutionClass": "STANDARD",
+    "NonOverridableArguments": {},
+    "DefaultArguments": {
+      "--enable-lakeformation-fine-grained-access": "false",
+      "--job-language": "python",
+      "--TempDir": "s3://amazon-sagemaker-296062566109-ap-northeast-2-5hfkhb14zra3vc/sys/glue/temp/",
+      "--enable-metrics": "true",
+      "--enable-observability-metrics": "false",
+      "--spark-event-logs-path": "s3://amazon-sagemaker-296062566109-ap-northeast-2-5hfkhb14zra3vc/sys/glue/spark/",
+      "--enable-glue-datacatalog": "true",
+      "--enable-spark-ui": "true",
+      "--enable-auto-scaling": "true",
+      "--smus-job-compute": "default.spark",
+      "--smus-orig-asset": "jobs/test-git-v2-1787289146081/test-git-v2-1787289146081.vetl",
+      "--conf": "spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions --conf spark.datasource.redshift.community.glue_endpoint=https://glue.ap-northeast-2.amazonaws.com --conf spark.datasource.redshift.community.data_api_endpoint=https://redshift-data.ap-northeast-2.amazonaws.com --conf spark.hadoop.fs.s3.impl=com.amazon.ws.emr.hadoop.fs.EmrFileSystem --conf spark.driver.maxResultSize=0 --conf spark.sql.catalog.spark_catalog=org.apache.iceberg.spark.SparkSessionCatalog --conf spark.sql.catalog.spark_catalog.catalog-impl=org.apache.iceberg.aws.glue.GlueCatalog --conf spark.sql.catalog.spark_catalog.glue.id=296062566109 --conf spark.sql.catalog.spark_catalog.glue.account-id=296062566109 --conf spark.sql.catalog.spark_catalog.glue.endpoint=https://glue.ap-northeast-2.amazonaws.com --conf spark.sql.catalog.spark_catalog.client.region=ap-northeast-2 --conf spark.extraListeners=io.openlineage.spark.agent.OpenLineageSparkListener --conf spark.openlineage.transport.type=amazon_datazone_api --conf spark.openlineage.transport.domainId=dzd-6750yazc5y2448 --conf spark.openlineage.columnLineage.datasetLineageEnabled=True --conf spark.openlineage.facets.custom_environment_variables=[AWS_DEFAULT_REGION;GLUE_VERSION;GLUE_COMMAND_CRITERIA;GLUE_PYTHON_VERSION;] --conf spark.glue.accountId=296062566109 --conf spark.glue.JOB_NAME=test-git-v2-1787289146081",
+      "--custom-logGroup-prefix": "datazone-5hfkhb14zra3vc-dev",
+      "author": "arn:aws:iam::296062566109:role/SageMakerAdminFederatedRole"
+    },
+    "connection": {
+      "configurations": [
+        {
+          "classification": "GlueDefaultArgument",
+          "properties": {
+            "--enable-lakeformation-fine-grained-access": "false"
+          }
+        }
+      ],
+      "domainIdentifier": "dzd-6750yazc5y2448",
+      "projectIdentifier": "5hfkhb14zra3vc",
+      "environmentIdentifier": "57u119hyqk60ew",
+      "connectionIdentifier": "6ka2rg0ewt5qu0",
+      "name": "default.spark",
+      "displayType": "Glue (Spark)",
+      "type": "SPARK",
+      "authorizationMode": "PROJECT",
+      "provisioningType": "MANAGED",
+      "createdAt": "2026-02-12T18:20:43.079Z",
+      "updatedAt": "2026-02-12T18:20:43.079Z",
+      "location": {
+        "awsRegion": "ap-northeast-2",
+        "awsAccountId": "296062566109"
+      },
+      "physicalEndpoints": [
+        {
+          "awsLocation": {
+            "awsAccountId": "296062566109",
+            "awsRegion": "ap-northeast-2"
+          }
+        }
+      ],
+      "sparkGlueProperties": {
+        "glueConnection": {},
+        "sessionConfigs": {
+          "idle_timeout": 60,
+          "glue_version": "5.0",
+          "worker_type": "G.1X",
+          "number_of_workers": 10
+        }
+      }
+    },
+    "Command": {
+      "Name": "glueetl",
+      "ScriptLocation": "s3://amazon-sagemaker-296062566109-ap-northeast-2-5hfkhb14zra3vc/shared/jobs/test-git-v2-1787289146081/test-git-v2-1787289146081.py",
+      "PythonVersion": "3.9"
+    },
+    "Tags": {
+      "AmazonDataZoneProject": "5hfkhb14zra3vc",
+      "AmazonDataZoneUsername": "arn:aws:iam::296062566109:role/SageMakerAdminFederatedRole"
+    }
+  }
+}
